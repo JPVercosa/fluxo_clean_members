@@ -21,8 +21,8 @@ python -m venv myenv
 source myenv/bin/activate  # No Windows, use `myenv\Scripts\activate`
 ```
 
-[!NOTE]
-No Windows ao tentar criar um novo ambiente pela primeira vez, pode ocorrer um erro devido as permissões para rodar o script necessário. Para resolvê-lo será necessário a alteração da política de execução de script para o usuário. Para isso dentro do PowerShell execute o seguinte comando: </br> `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+> [!NOTE]
+> No Windows ao tentar criar um novo ambiente pela primeira vez, pode ocorrer um erro devido as permissões para rodar o script necessário. Para resolvê-lo será necessário a alteração da política de execução de script para o usuário. Para isso dentro do PowerShell execute o seguinte comando: </br> `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
 
 3. **Instalar Dependências**: Após a ativação do ambiente virtual, instale as dependências listadas no arquivo `requirements.txt`.
 
@@ -102,11 +102,11 @@ Execute o script com o seguinte comando, substituindo `nomedoplanilha.xlsx` pelo
 python script.py --file nomedoplanilha.xlsx
 ```
 
-[!WARNING]
-Esse script é um script que vai remover membros do Podio, após a remoção de um membro para ele voltar ao Podio será necessário que ele faça todo o processo de criar uma conta de acesso ao Podio novamente. Não é possível restaurar o usuário após removê-lo. Áreas de Trabalho que só contém a pessoa inativa sendo removida também serão apagadas. Certifique-se de estar com a planilha correta de membros ativos e que os emails dos membros na planilha são os mesmos que eles utilizaram para se cadastrar na plataforma.
+> [!WARNING]
+> Esse script é um script que vai remover membros do Podio, após a remoção de um membro para ele voltar ao Podio será necessário que ele faça todo o processo de criar uma conta de acesso ao Podio novamente. Não é possível restaurar o usuário após removê-lo. Áreas de Trabalho que só contém a pessoa inativa sendo removida também serão apagadas. Certifique-se de estar com a planilha correta de membros ativos e que os emails dos membros na planilha são os mesmos que eles utilizaram para se cadastrar na plataforma.
 
-[!NOTE]
-Antes de iniciar as remoções, o Script calcula se ele encontra todos os emails existentes na planilha no Podio se ele encontra emails que estão na Planilha e não estão no Podio, ele para a execução e gera um erro com a mensagem `Emails não encontrados no Podio` e imprime a lista de emails não encontrados, que devem ser alterados na planilha, para corresponderem ao email do usuário no Podio.
+> [!NOTE]
+> Antes de iniciar as remoções, o Script calcula se ele encontra todos os emails existentes na planilha no Podio se ele encontra emails que estão na Planilha e não estão no Podio, ele para a execução e gera um erro com a mensagem `Emails não encontrados no Podio` e imprime a lista de emails não encontrados, que devem ser alterados na planilha, para corresponderem ao email do usuário no Podio.
 
 ## Estrutura do Código
 
